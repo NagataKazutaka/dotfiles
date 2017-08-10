@@ -1,0 +1,29 @@
+## set alias
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias ls='ls -F'
+alias dir='ls -al'
+alias h='history'
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+alias be='bundle exec'
+alias redis.start='redis-server /usr/local/etc/redis.conf'
+alias redis.stop='redis-cli shutdown'
+alias sidekiq='bundle exec sidekiq -C config/sidekiq.yml'
+alias jsl='jsl -conf jsl.conf'
+alias unicorn='bundle exec unicorn_rails -c config/unicorn/unicorn_develop.rb -E development -p 3000 -D'
+alias basic='bundle exec foreman start -c all=1,redis=0,web=0'
+#alias foreman='bundle exec foreman start -c all=1,redis=0,web=0,scheduler_worker=2,worker=10'
+alias lr='bundle exec foreman start all=1,redis=0 -p3001'
+
+alias mysqll='mysql -u root -p --auto-rehash'
+
+# ディレクトリの履歴
+alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
+
+alias ftp_start='sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist'
+alias ftp_stop='sudo launchctl unload -w /System/Library/LaunchDaemons/ftp.plist'
+

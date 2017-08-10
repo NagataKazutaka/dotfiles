@@ -1,0 +1,46 @@
+[user]
+	name = _name_ 
+	email = _email_
+[alias]
+    ci = commit
+    st = status --ignore-submodules=dirty
+    co = checkout
+    url = config --get remote.origin.url
+    pr = pull --rebase
+    rbm = rebase master
+    lp = log -p
+    ls = log --stat
+    lg= log --decorate
+    lgg= log --decorate --oneline --graph
+    wd= diff --word-diff
+
+    b = branch
+    bm = branch --merged
+
+    d = diff
+    ds = diff --staged
+
+    fo = fetch origin
+    ro = rebase origin
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactvie = auto
+    grep = auto
+[status]
+    diff = auto
+[branch]
+    diff = auto
+[core]
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    quotepath = true
+[push]
+    default = tracking
+[pr-release]
+    token = _token_
+
+[http]
+    sslVerify = false
+

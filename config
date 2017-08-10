@@ -1,0 +1,31 @@
+Host host1
+  ForwardAgent yes
+  HostName     0.0.0.0
+  User         user
+  IdentityFile ~/.ssh/id_rsa
+  Port         22
+
+Host host2
+  HostName     0.0.0.0
+  User         ubuntu
+  IdentityFile ~/.ssh/pem.pem
+  port         22
+  ProxyCommand ssh -W %h:%p gw
+
+Host local
+  HostName    local
+  User        user
+  IdentityFile ~/.ssh/id_rsa
+  Port        29418
+  TCPKeepAlive yes
+  IdentitiesOnly yes
+
+Host github.com
+  Compression yes
+  Ciphers aes256-ctr
+
+Host *
+  ServerAliveInterval    100
+  ControlMaster        auto
+  ControlPath        /tmp/%r@%h:%p
+

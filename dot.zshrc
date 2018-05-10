@@ -12,6 +12,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v "1.7"`
 unsetopt promptcr
 setopt prompt_subst
 setopt transient_rprompt
+setopt nonomatch
 autoload -U colors; colors
 autoload -Uz vcs_info
 
